@@ -1,0 +1,17 @@
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Helpers\bin\Debug\FoodItem.Helpers.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Helpers\bin\Debug\FoodItem.Helpers.pdb
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.csproj.AssemblyReference.cache
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Helpers\bin\Debug\FoodItem.Helpers.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Helpers\bin\Debug\FoodItem.Helpers.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.csproj.AssemblyReference.cache
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Helpers\bin\Debug\FoodItem.Helpers.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Helpers\bin\Debug\FoodItem.Helpers.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Helpers\obj\Debug\FoodItem.Helpers.pdb

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="practice_547Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="40" />
+    <Property Name="StateId" Type="int" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country_name" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="CouponCodeMaster">
+    <Key>
+      <PropertyRef Name="CouponId" />
+    </Key>
+    <Property Name="CouponId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="Type" Type="varchar" MaxLength="100" />
+    <Property Name="FlatAmount" Type="int" />
+    <Property Name="Percentage" Type="int" />
+    <Property Name="Expirydate" Type="date" />
+    <Property Name="UsageLimit" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Destination">
+    <Key>
+      <PropertyRef Name="DestinationId" />
+    </Key>
+    <Property Name="DestinationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DestinationName" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="hobbies">
+    <Key>
+      <PropertyRef Name="HobbiesId" />
+    </Key>
+    <Property Name="HobbiesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HobbiesName" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="ItemDetails">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="250" />
+    <Property Name="ItemQty" Type="int" />
+    <Property Name="ItemAmount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="OrderId" Type="int" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="250" />
+    <Property Name="ItemAmount" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalItems" Type="int" />
+    <Property Name="TotalAmount" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="Cgst" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Sgst" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="PaybleAmount" Type="decimal" Precision="25" Scale="2" />
+    <Property Name="NetPaybleAmount" Type="decimal" Precision="25" Scale="2" />
+    <Property Name="PromoCode" Type="varchar" MaxLength="250" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="40" />
+    <Property Name="FirstName" Type="varchar" MaxLength="40" />
+    <Property Name="LastName" Type="varchar" MaxLength="40" />
+    <Property Name="Password" Type="varchar" MaxLength="40" />
+    <Property Name="Email" Type="varchar" MaxLength="40" />
+    <Property Name="hobbies" Type="varchar" MaxLength="40" />
+    <Property Name="gender" Type="varchar" MaxLength="40" />
+    <Property Name="role" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="State" Type="int" />
+    <Property Name="City" Type="int" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="Destination" Type="varchar" MaxLength="40" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="20" />
+    <Property Name="profilePicture" Type="text" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="40" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <Association Name="FK__ItemDetai__Order__5EBF139D">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="ItemDetails" Type="Self.ItemDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="ItemDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__UserId__5812160E">
+    <End Role="Registration" Type="Self.Registration" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registration">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk1">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="state" Type="Self.state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk10">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk11">
+    <End Role="state" Type="Self.state" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk12">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk2">
+    <End Role="state" Type="Self.state" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk9">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="practice_547ModelStoreContainer">
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CouponCodeMaster" EntityType="Self.CouponCodeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Destination" EntityType="Self.Destination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hobbies" EntityType="Self.hobbies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemDetails" EntityType="Self.ItemDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemMaster" EntityType="Self.ItemMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="state" EntityType="Self.state" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ItemDetai__Order__5EBF139D" Association="Self.FK__ItemDetai__Order__5EBF139D">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="ItemDetails" EntitySet="ItemDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__UserId__5812160E" Association="Self.FK__Orders__UserId__5812160E">
+      <End Role="Registration" EntitySet="Registration" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="Fk1" Association="Self.Fk1">
+      <End Role="country" EntitySet="country" />
+      <End Role="state" EntitySet="state" />
+    </AssociationSet>
+    <AssociationSet Name="fk10" Association="Self.fk10">
+      <End Role="country" EntitySet="country" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <AssociationSet Name="fk11" Association="Self.fk11">
+      <End Role="state" EntitySet="state" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <AssociationSet Name="fk12" Association="Self.fk12">
+      <End Role="City" EntitySet="City" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <AssociationSet Name="fk2" Association="Self.fk2">
+      <End Role="state" EntitySet="state" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="Fk9" Association="Self.Fk9">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,235 @@
+﻿@model FoodItem.Models.ViewModel.RegisterModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sign In </title>
+
+    <!-- Font Icon -->
+    <link href="~/Content/Theme/Login/fonts/material-icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <!-- Main css -->
+    <link href="~/Content/Theme/Login/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-12">
+                    <div class="p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4">Sign Up</h3>
+                            </div>
+                        </div>
+                        <form method="post" class="signin-form" enctype="multipart/form-data">
+                            <div class="form-group mb-3">
+                                <select class="form-control" name="Role">
+                                    <option disabled selected>Select Role</option>
+                                    <option value=1>Admin</option>
+                                    <option value=2>User</option>
+                                </select>
+                                @Html.ValidationMessageFor(m => m.role, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">Username</label>
+                                <input type="text" class="form-control" name="Username" placeholder="Username">
+                                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">First Name</label>
+                                <input type="text" class="form-control" name="FirstName" placeholder="FirstName">
+                                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">LastName</label>
+                                <input type="text" class="form-control" name="LastName" placeholder="LastName">
+                                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">Email</label>
+                                <input type="text" class="form-control" name="Email" placeholder="Email">
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Password</label>
+                                <input type="password" class="form-control" placeholder="Password" name="Password">
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">ConformPassword</label>
+                                <input type="password" class="form-control" placeholder="ConformPassword" name="ConformPassword">
+                                @Html.ValidationMessageFor(m => m.ConformPassword, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Phone Number</label>
+                                <input type="number" class="form-control" placeholder="PhoneNumber" name="PhoneNumber">
+                                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Destination</label>
+                                <select class="form-control" name="DestinationId">
+                                    <option disabled selected>Select Destination</option>
+                                    @if (ViewBag.Destination != null)
+                                    {
+                                        foreach (var item in ViewBag.Destination)
+                                        {
+                        <option value=@item.DestinationId>@item.DestinationName</option>
+}
+                }
+
+                                </select>
+                                @Html.ValidationMessageFor(m => m.DestinationId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="label" for="profilePicture">Choose Your Photo</label>
+                                        <input type="file" class="form-control-file border" name="profilePicture">
+                                        @Html.ValidationMessageFor(m => m.profilePicture, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col">
+                                        <label class="label" for="gender">Select Gender</label><br />
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="gender" value="Male">Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="gender" value="Female">Female
+                                            </label>
+                                        </div><br />
+                                        @Html.ValidationMessageFor(m => m.gender, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="label" for="password">Hobbieee</label><br />
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" name="hobbies" value=1>Cricket
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" name="hobbies" value=2>Football
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" name="hobbies" value=3>Traveling
+                                            </label>
+                                        </div><br />
+                                        @Html.ValidationMessageFor(m => m.hobbies, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col">
+                                        <label class="label" for="password">Choose Date Of Birth</label><br />
+                                        <input type="date" class="form-control" id="date" placeholder="Date Of Birth" name="Dob">
+                                        @Html.ValidationMessageFor(m => m.Dob, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <select class="form-control" id="Country" name="Country">
+                                            <option disabled selected>Select Country</option>
+                                            @if (ViewBag.Country != null)
+                                            {
+                                                foreach (var item in ViewBag.Country)
+                                                {
+                                               <option value=@item.CountryId>@item.Country_name</option>}
+                                            }
+                                        </select>
+                                        @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-4">
+                                        <select class="form-control" id="State" name="State">
+                                            <option disabled selected>Select State</option>
+
+                                        </select>
+                                        @Html.ValidationMessageFor(m => m.State, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-4">
+                                        <select class="form-control" id="City" name="City">
+                                            <option disabled selected>Select City</option>
+
+                                        </select>
+                                        @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">
+                                    Sign
+                                    Up
+                                </button>
+                            </div>
+
+                        </form>
+                        @Html.ActionLink("Sign In", "Login", "Login", null, new { @class = "text-primary text-center" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Content/Theme/Login/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/Theme/Login/js/main.js"></script>
+    <script>
+        function AddState(data) {
+            for (var i = 0; i < data.length; i++) {
+                var options = `<option value= ${data[i].StateId} >  ${data[i].StateName} </option>`
+                $('#State').append(options);
+            }
+        }
+        function AddCity(data) {
+            for (var i = 0; i < data.length; i++) {
+                var options = `<option value= ${data[i].CityId}  >  ${data[i].CityName}  </option>`
+                $('#City').append(options);
+            }
+        }
+
+        $(document).ready(function () {
+            $('#Country').on('change', function () {
+                $('#State').html('<option>Select</option>')
+                $('#City').html('<option>Select</option>')
+                var CountryId = $('#Country').val();
+                $.ajax({
+                    url: '/Login/GetStateByCountry?CountryId=' + CountryId,
+                    type: 'GET',
+                    success: function (data) {
+                        console.log(data)
+                        AddState(data)
+
+                    }
+                })
+            })
+            $('#State').on('change', function () {
+                $('#City').html('<option>Select</option>')
+              
+                var StateValue = $('#State').val();
+                $.ajax({
+                    url: '/Login/GetCityStateId?StateId=' + StateValue,
+                    type: 'GET',
+                    success: function (data) {
+                        console.log(data)
+                        AddCity(data)
+                    }
+                })
+            })
+        })
+
+        var today = new Date();
+        $('#date').prop('max', new Date(today.getFullYear() - 18, today.getMonth(), today.getDate()).toLocaleDateString('en-CA'));
+    </script>
+</body>
+</html>

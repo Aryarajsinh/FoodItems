@@ -1,0 +1,78 @@
+@model FoodItem.Models.ViewModel.LoginModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Sign In </title>
+
+	<!-- Font Icon -->
+	<link href="~/Content/Theme/Login/fonts/material-icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
+	<!-- Main css -->
+	<link href="~/Content/Theme/Login/css/style.css" rel="stylesheet" />
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @if (ViewBag.loginfailtoastr != null)
+    {
+        <script>
+			toastr.error('@ViewBag.loginfailtoastr')
+        </script>
+    }
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-12">
+                    <div class="p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4">Sign In</h3>
+                            </div>
+
+                        </div>
+                        <form method="post" class="signin-form">
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">Email</label>
+                                <input type="email" class="form-control" name="Email" placeholder="Email">
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Password</label>
+                                <input type="password" class="form-control" placeholder="Password" name="Password">
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">
+                                    Sign
+                                    In
+                                </button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0">
+                                        Remember Me
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a href="#">Forgot Password</a>
+                                </div>
+                            </div>
+                        </form>
+                        @Html.ActionLink("Sign Up", "Register", "Login", null, new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="~/Content/Theme/Login/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/Theme/Login/js/main.js"></script>
+</body>
+</html>

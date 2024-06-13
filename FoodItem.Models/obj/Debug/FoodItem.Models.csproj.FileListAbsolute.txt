@@ -1,0 +1,34 @@
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.dll.config
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.pdb
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.CopyComplete
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.dll.config
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.xml
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.AssemblyReference.cache
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.CoreCompileInputs.cache
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.CopyComplete
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.dll.config
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\FoodItem.Models.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.csproj.CopyComplete
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Models\obj\Debug\FoodItem.Models.pdb

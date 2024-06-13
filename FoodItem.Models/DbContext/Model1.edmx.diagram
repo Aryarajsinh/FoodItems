@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cbd958a5160b417ab068dbf9d28e4d5d" Name="Diagram1">
+        <EntityTypeShape EntityType="practice_547Model.City" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="practice_547Model.country" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="practice_547Model.hobbies" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="practice_547Model.Registration" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="practice_547Model.Roles" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="practice_547Model.state" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="practice_547Model.fk12" ManuallyRouted="false" />
+        <AssociationConnector Association="practice_547Model.fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="practice_547Model.Fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="practice_547Model.fk10" ManuallyRouted="false" />
+        <AssociationConnector Association="practice_547Model.fk11" ManuallyRouted="false" />
+        <AssociationConnector Association="practice_547Model.Fk9" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="practice_547Model.Destination" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="practice_547Model.CouponCodeMaster" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="practice_547Model.ItemDetails" Width="1.5" PointX="12" PointY="3.75" />
+        <EntityTypeShape EntityType="practice_547Model.ItemMaster" Width="1.5" PointX="5.375" PointY="8.75" />
+        <EntityTypeShape EntityType="practice_547Model.Orders" Width="1.5" PointX="9.75" PointY="3.125" />
+        <AssociationConnector Association="practice_547Model.FK__ItemDetai__Order__5EBF139D" />
+        <AssociationConnector Association="practice_547Model.FK__Orders__UserId__5812160E" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

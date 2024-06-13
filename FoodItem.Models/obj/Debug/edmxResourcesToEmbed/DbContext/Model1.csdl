@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="practice_547Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" />
+    <NavigationProperty Name="Registration" Relationship="Self.fk12" FromRole="City" ToRole="Registration" />
+    <NavigationProperty Name="state" Relationship="Self.fk2" FromRole="City" ToRole="state" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="state" Relationship="Self.Fk1" FromRole="country" ToRole="state" />
+    <NavigationProperty Name="Registration" Relationship="Self.fk10" FromRole="country" ToRole="Registration" />
+  </EntityType>
+  <EntityType Name="hobbies">
+    <Key>
+      <PropertyRef Name="HobbiesId" />
+    </Key>
+    <Property Name="HobbiesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HobbiesName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="hobbies" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="profilePicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="City" Type="Int32" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="City1" Relationship="Self.fk12" FromRole="Registration" ToRole="City" />
+    <NavigationProperty Name="country1" Relationship="Self.fk10" FromRole="Registration" ToRole="country" />
+    <NavigationProperty Name="state1" Relationship="Self.fk11" FromRole="Registration" ToRole="state" />
+    <NavigationProperty Name="Roles" Relationship="Self.Fk9" FromRole="Registration" ToRole="Roles" />
+    <Property Name="Destination" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="practice_547Model.FK__Orders__UserId__5812160E" FromRole="Registration" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Registration" Relationship="Self.Fk9" FromRole="Roles" ToRole="Registration" />
+  </EntityType>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="Self.fk2" FromRole="state" ToRole="City" />
+    <NavigationProperty Name="country" Relationship="Self.Fk1" FromRole="state" ToRole="country" />
+    <NavigationProperty Name="Registration" Relationship="Self.fk11" FromRole="state" ToRole="Registration" />
+  </EntityType>
+  <Association Name="fk12">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk2">
+    <End Role="state" Type="Self.state" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk1">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="state" Type="Self.state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk10">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk11">
+    <End Role="state" Type="Self.state" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk9">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="practice_547Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="City" EntityType="Self.City" />
+    <EntitySet Name="country" EntityType="Self.country" />
+    <EntitySet Name="hobbies" EntityType="Self.hobbies" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="state" EntityType="Self.state" />
+    <AssociationSet Name="fk12" Association="Self.fk12">
+      <End Role="City" EntitySet="City" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <AssociationSet Name="fk2" Association="Self.fk2">
+      <End Role="state" EntitySet="state" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="Fk1" Association="Self.Fk1">
+      <End Role="country" EntitySet="country" />
+      <End Role="state" EntitySet="state" />
+    </AssociationSet>
+    <AssociationSet Name="fk10" Association="Self.fk10">
+      <End Role="country" EntitySet="country" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <AssociationSet Name="fk11" Association="Self.fk11">
+      <End Role="state" EntitySet="state" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <AssociationSet Name="Fk9" Association="Self.Fk9">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Registration" EntitySet="Registration" />
+    </AssociationSet>
+    <EntitySet Name="Destination" EntityType="practice_547Model.Destination" />
+    <EntitySet Name="CouponCodeMaster" EntityType="practice_547Model.CouponCodeMaster" />
+    <EntitySet Name="ItemDetails" EntityType="practice_547Model.ItemDetails" />
+    <EntitySet Name="ItemMaster" EntityType="practice_547Model.ItemMaster" />
+    <EntitySet Name="Orders" EntityType="practice_547Model.Orders" />
+    <AssociationSet Name="FK__ItemDetai__Order__5EBF139D" Association="practice_547Model.FK__ItemDetai__Order__5EBF139D">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="ItemDetails" EntitySet="ItemDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__UserId__5812160E" Association="practice_547Model.FK__Orders__UserId__5812160E">
+      <End Role="Registration" EntitySet="Registration" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Destination">
+    <Key>
+      <PropertyRef Name="DestinationId" />
+    </Key>
+    <Property Name="DestinationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DestinationName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CouponCodeMaster">
+    <Key>
+      <PropertyRef Name="CouponId" />
+    </Key>
+    <Property Name="CouponId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FlatAmount" Type="Int32" />
+    <Property Name="Percentage" Type="Int32" />
+    <Property Name="Expirydate" Type="DateTime" Precision="0" />
+    <Property Name="UsageLimit" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ItemDetails">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ItemQty" Type="Int32" />
+    <Property Name="ItemAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="OrderId" Type="Int32" />
+    <NavigationProperty Name="Orders" Relationship="practice_547Model.FK__ItemDetai__Order__5EBF139D" FromRole="ItemDetails" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ItemAmount" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalItems" Type="Int32" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="Cgst" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Sgst" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PaybleAmount" Type="Decimal" Precision="25" Scale="2" />
+    <Property Name="NetPaybleAmount" Type="Decimal" Precision="25" Scale="2" />
+    <Property Name="PromoCode" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="ItemDetails" Relationship="practice_547Model.FK__ItemDetai__Order__5EBF139D" FromRole="Orders" ToRole="ItemDetails" />
+    <NavigationProperty Name="Registration" Relationship="practice_547Model.FK__Orders__UserId__5812160E" FromRole="Orders" ToRole="Registration" />
+  </EntityType>
+  <Association Name="FK__ItemDetai__Order__5EBF139D">
+    <End Type="practice_547Model.Orders" Role="Orders" Multiplicity="0..1" />
+    <End Type="practice_547Model.ItemDetails" Role="ItemDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="ItemDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__UserId__5812160E">
+    <End Type="practice_547Model.Registration" Role="Registration" Multiplicity="0..1" />
+    <End Type="practice_547Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registration">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

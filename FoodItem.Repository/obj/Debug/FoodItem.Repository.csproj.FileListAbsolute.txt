@@ -1,0 +1,45 @@
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.dll.config
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.pdb
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.pdb
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.dll.config
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.AssemblyReference.cache
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.CopyComplete
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.dll
+C:\Users\sit406\source\repos\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.dll.config
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.pdb
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.dll.config
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.AssemblyReference.cache
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.CopyComplete
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.dll
+C:\Users\Aryarajsinh Harma\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.dll.config
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Repository.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.pdb
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\FoodItem.Models.dll.config
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.AssemblyReference.cache
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.csproj.CopyComplete
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.dll
+C:\Users\sit406\Downloads\FoodItems\FoodItem.Repository\obj\Debug\FoodItem.Repository.pdb
